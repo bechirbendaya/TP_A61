@@ -2,8 +2,9 @@ from sklearn.linear_model import Lasso
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
 
-from .processing import preprocessors as pp
-from .config import config
+from regression_model.processing import preprocessors as pp
+from regression_model.config import config
+
 
 price_pipe = Pipeline(
     [

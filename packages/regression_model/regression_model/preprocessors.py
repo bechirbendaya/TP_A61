@@ -24,18 +24,3 @@ class CategoricalImputer(BaseEstimator, TransformerMixin):
             X[feature] = X[feature].fillna('Missing')
 
         return X
-		
-class NumericalImputer(BaseEstimator, TransformerMixin):
-    """Numerical data missing value imputer."""
-
-    def __init__(self, variables=None, strategy='mean') -> None:
-        self.variables = variables
-        self.strategy = strategy
-
-    def fit(self, X: pd.DataFrame, y: pd.Series = None) -> 'NumericalImputer':
-        # Logic to calculate the imputation value (mean, median, etc.)
-        return self
-
-    def transform(self, X: pd.DataFrame) -> pd.DataFrame:
-        # Logic to apply imputation to the DataFrame
-        return X
